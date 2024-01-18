@@ -11,4 +11,6 @@ Consider the following process - start with m white balls and n black balls in a
 
 Stop the process when all the remaining balls in the urn become the same colour. Let’s write $P(m, n)$ for the probability that, starting with $m$ white balls and $n$ black balls, all the balls are white when the process is stopped. Then the question becomes Is it true that $P(1, n)$ converges to $1$ as $n \to \infty$?
 
+**Source**: [mathoverflow user](https://mathoverflow.net/questions/460095/how-to-show-a-function-converges-to-1)
+
 
