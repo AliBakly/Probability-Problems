@@ -30,3 +30,11 @@ $$\pi \approx \frac{2}{\hat{p}} \cdot \frac{l}{t},$$ where $\hat{p}$ is the esti
 
 **Source**: [Wikipedia](https://en.wikipedia.org/wiki/Buffon%27s_needle_problem)
 
+## Problem 4: Random Walks and Pólya's Theorem
+**Problem**:In mathematics, a random walk, sometimes known as a drunkard's walk, is a random process that describes a path that consists of a succession of random steps on some mathematical space. Let $p(d)$ be the probability that a random walk on a $d$-dimensional lattice returns to the origin, then an interesting question is what values $p(1), p(2) and p(3)$ take. Indeed, Pólya's theorem states that $p(1) = p(2) = 1$, but $p(d)<1$ for $d>2$. In particular it has been shown that
+$$p(3) = 1 - \frac{1}{u(3)} \approx 0.340537...,$$ where $u(3)$ is given by the third of the Watson's Triple Integrals which has the exact solution, $$u(3)=\frac{\sqrt{6}}{32\pi^3} \Gamma{\left(\frac{1}{24}\right)} \Gamma{\left(\frac{5}{24}\right)} \Gamma{\left(\frac{7}{24}\right)} \Gamma{\left(\frac{11}{24}\right)}$$. A very peculiar result, to say the least. Let's simulate it!
+
+**Idea**: 
+
+**Source**: [Wolfram MathWorld](https://mathworld.wolfram.com/PolyasRandomWalkConstants.html)
+
