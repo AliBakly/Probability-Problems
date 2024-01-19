@@ -1,6 +1,6 @@
 # Probability-Problems
 Some interesting probability problems, some which are possible to solve by hand and some which are harder or near impossible. I will solve them (or at least get estimates) via simulations.
-## Problem 1
+## Problem 1: An elementary but fiendishly difficult probability problem
 **Problem**: Consider the following recurrence relation in two variables:
 $$f(a, b) = \frac{a}{a+b} f(a-1,b)+ \frac{b}{a+b}f(a+1,b-1) $$
 for positive integers $a$ and $b$,
