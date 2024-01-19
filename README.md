@@ -21,4 +21,12 @@ Stop the process when all the remaining balls in the urn become the same colour.
 
 **Source**: [Wikipedia](https://en.wikipedia.org/wiki/Birthday_problem)
 
+## Problem 3: Monte Carlo method for approximating $\pi$ using Buffon's needle problem
+**Problem**:In probability theory, Buffon's needle problem is a question first posed in the 18th century by Georges-Louis Leclerc, Comte de Buffon:
+Suppose we have a floor made of parallel strips of wood, each the same width, and we drop a needle onto the floor. What is the probability that the needle will lie across a line between two strips?
+
+**Idea**: It can be shown analyticaly that the solution for the sought probability $p$, in the case where the needle length $l$ is not greater than the width $t$ of the strips, is $$p = \frac{2}{\pi} \cdot \frac{l}{t},$$ which means that we can estimate $\pi$ with
+$$\pi \approx \frac{2}{\hat{p}} \cdot \frac{l}{t},$$ where $\hat{p}$ is the estimated probability from the simulation.
+
+**Source**: [Wikipedia](https://en.wikipedia.org/wiki/Buffon%27s_needle_problem)
 
