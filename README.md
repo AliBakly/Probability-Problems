@@ -1,5 +1,7 @@
 # Probability-Problems
 Some interesting probability problems, some which are possible to solve by hand and some which are harder or near impossible. I will solve them (or at least get estimates) via simulations.
+
+The first 5 problems are simulated and the simulations are provided in the respective Python script. In the last section I have an added bonus part, which is purely mathematical without any simulations. The purpose of this is to showcase a beautiful connection between analysis and the distribution of prime numbers, derived from elementary probability theory, which I think anyone interested in probability should see. We derive the Euler product formula for the Riemann zeta function, which connects the Riemann hypothesis, a conjecture that many mathematicians consider the most important unsolved problem in pure mathematics, to the distribution of the primes.
 ## Problem 1: An elementary but fiendishly difficult probability problem
 **Problem**: Consider the following recurrence relation in two variables:
 $$f(a, b) = \frac{a}{a+b} f(a-1,b)+ \frac{b}{a+b}f(a+1,b-1) $$
@@ -47,3 +49,19 @@ The Putnam competition is widely considered to be the most prestigious universit
 
 **Source**: [Putnam 1992](https://kskedlaya.org/putnam-archive/1992.pdf), [Wolfram MathWorld](https://mathworld.wolfram.com/SpherePointPicking.html)
 
+
+## Bonus: A Beautiful Connection
+The Riemann zeta function or Euler-Riemann zeta function, denoted by the Greek letter $\zeta$ (zeta), is a mathematical function of a complex variable defined as
+$$\zeta(s)=\sum_{n=1}^{\infty} \frac{1}{n^s}=\frac{1}{1^s}+\frac{1}{2^s}+\frac{1}{3^s}+\cdots$$
+for $\text{Re}(s)>1$, and its analytic continuation elsewhere. Let $X$ be a discrete random variable with the probability mass density functions $$p_X(n) = \text{P}(X=n) =\frac{1}{n^s}\frac{1}{\zeta(s)},\ n\geq 1,\ n \in \mathbb{Z}$$
+
+### a) Prove that $p_X(n)$ is indeed a probability mass density function.
+It is evident that $p_X(n)$ is non negative. It is left to show that the probabilities sum up to 1. $$\sum_{n=1}^\infty \text{P}(X=n) = \sum_{n=1}^\infty \frac{1}{n^s}\frac{1}{\zeta(s)} = \frac{1}{\zeta(s)} \sum_{n=1}^\infty \frac{1}{n^s} = \frac{1}{\zeta(s)} \zeta(s) = 1,$$ and we are done.
+
+### b) Let $k \geq 2$ be an integer. What is the probability that $X$ is divisible by $k$?
+For $X$ to be divisible by $k$ it needs to be a multiple of $k$, meaning $$\text{P}(X \equiv 0\ \text{mod}\ k) = \text{P}(X = k) + \text{P}(X = 2k) + \text{P}(X = 3k) \cdots$$ In other words we want to find the sum $$\sum_{n=1}^\infty \text{P}(X = nk) = \sum_{n=1}^\infty \frac{1}{(nk)^s}\frac{1}{\zeta(s)} = \frac{1}{k^s}\sum_{n=1}^\infty \frac{1}{n^s}\frac{1}{\zeta(s)} = \frac{1}{k^s}.$$ Thus we have found that the probability of $X$ being divisible by $k$ is $\frac{1}{k^s}$.
+
+### c) What is the probability that $X$ is not divisible by any prime numbers.
+Let $D_k$ be the event that $X$ is divisible by $k$, then we are seeking after $$\text{P}\left( \bigcap_{\text{prime}\ p} D_p'\right).$$ Since $D_i$ and $D_j$, where $i$ and $j$ are primes, are independent (being divisible by the prime $i$ does not impact being divisible by the prime $j$), it is a simple excersice to show that the complements are also independent. Using this we have $$\text{P}\left( \bigcap_{\text{prime}\ p} D_p'\right) =\prod_{\text{prime}\ p} \text{P}(D_p') = \prod_{\text{prime}\ p} 1-\text{P}(D_p) = \prod_{\text{prime}\ p} 1-\frac{1}{p^s},$$ where we also used the results from the b) problem.
+
+On the other hand note that the only integer $X = n,\ n\geq 1$, which is not divisible by any primes is $1$, so in fact we have $$\text{P}\left( \bigcap_{\text{prime}\ p} D_p'\right) = \text{P} (X = 1).$$ But we know that $$\text{P} (X = 1) = \frac{1}{1^s}\frac{1}{\zeta(s)} = \frac{1}{\zeta(s)}$$ which yields $$\prod_{\text{prime}\ p} 1-\frac{1}{p^s}=\frac{1}{\zeta(s)}$$ or, rewritten $$\zeta(s)=\sum_{n=1}^{\infty} \frac{1}{n^s} = \prod_{\text{prime}\ p} \frac{1}{1-p^{-s}}$$. A remarkable connection between the Riemann zeta function and the prime numbers, the famous Euler product formula for the Riemann zeta function!
