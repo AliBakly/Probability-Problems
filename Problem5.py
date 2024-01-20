@@ -3,7 +3,7 @@ import numpy as np
 def sample_spherical(npoints, radius, ndim=3):
     vec = np.random.randn(ndim, npoints)
     vec /= np.linalg.norm(vec, axis=0)
-    vec *= np.sqrt(radius)
+    vec *= radius
     return vec
 
 def same_side(v1, v2, v3, v4, p):
