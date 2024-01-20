@@ -1,7 +1,8 @@
 # Probability-Problems
 Some interesting probability problems, some which are possible to solve by hand and some which are harder or near impossible. I will solve them (or at least get estimates) via simulations.
 
-The first 5 problems are simulated and the simulations are provided in the respective Python script. In the last section I have an added bonus part, which is purely mathematical without any simulations. The purpose of this is to showcase a beautiful connection between analysis and the distribution of prime numbers, derived from elementary probability theory, which I think anyone interested in probability should see. We derive the Euler product formula for the Riemann zeta function, which connects the Riemann hypothesis, a conjecture that many mathematicians consider the most important unsolved problem in pure mathematics, to the distribution of the primes.
+The first 5 problems are simulated and the simulations are provided in the respective Python script. In the last section I have an added bonus part, which is purely mathematical without any simulations. The purpose of this is to showcase a beautiful connection between analysis and the distribution of prime numbers, derived from elementary probability theory, which I think anyone interested in probability should see. It is one of my favorite problems in the subject matter!
+
 ## Problem 1: An elementary but fiendishly difficult probability problem
 **Problem**: Consider the following recurrence relation in two variables:
 $$f(a, b) = \frac{a}{a+b} f(a-1,b)+ \frac{b}{a+b}f(a+1,b-1) $$
