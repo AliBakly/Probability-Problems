@@ -38,3 +38,10 @@ $$p(3) = 1 - \frac{1}{u(3)} \approx 0.340537...,$$ where $u(3)$ is given by the 
 
 **Source**: [Wolfram MathWorld](https://mathworld.wolfram.com/PolyasRandomWalkConstants.html)
 
+## Problem 5: Infamous Putnam Problem
+**Problem**: In the 1992 Putnam competition the following problem can be found: Four points are chosen independently and at random on the surface of a sphere (using the uniform distribution). What is the probability that the center of the sphere lies inside the resulting tetrahedron?
+
+**Idea**: 
+
+**Source**: [Putnam 1992](https://kskedlaya.org/putnam-archive/1992.pdf)
+
