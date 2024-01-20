@@ -41,7 +41,9 @@ $$p(3) = 1 - \frac{1}{u(3)} \approx 0.340537...,$$ where $u(3)$ is given by the 
 ## Problem 5: Infamous Putnam Problem
 **Problem**: In the 1992 Putnam competition the following problem can be found: Four points are chosen independently and at random on the surface of a sphere (using the uniform distribution). What is the probability that the center of the sphere lies inside the resulting tetrahedron?
 
-**Idea**: 
+The Putnam competition is widely considered to be the most prestigious university-level mathematics competition in the world, and its difficulty is such that the median score is often zero (out of 120) despite being attempted by students specializing in mathematics. It is needless to say that this is a hard problem to solve by hand.
 
-**Source**: [Putnam 1992](https://kskedlaya.org/putnam-archive/1992.pdf)
+**Idea**: First we need to generate four random points uniformly on a sphere. Deceivingly, it is incorrect to select spherical coordinates $\theta$ and $\phi$ from uniform distributions $\theta \in[0,2 \pi)$ and $\phi \in[0, \pi]$, since the area element $d \Omega=\sin \phi\ d\theta d\phi$ is a function of $\phi$, and hence points picked in this way will be "bunched" near the poles. Instead one should generate three random numbers $x,\ y,\ z$ using a Gaussian distribution and ultiply each number by $r/\sqrt{x^2+y^2+z^2}$ (a.k.a. Normalise). Once we have generated four points via this method we must determine if the center of the sphere lies inside the tetrahedron with the four points as vertexes. We do this utilizing simple linear algebra: for each plane of the tetrahedron, check if the point is on the same side as the remaining vertex. If it is for all the planes, then the point (the center of the sphere) lies inside the tetrahedron. Simulate this numerous times and estimate the probability
+
+**Source**: [Putnam 1992](https://kskedlaya.org/putnam-archive/1992.pdf), [Wolfram MathWorld](https://mathworld.wolfram.com/SpherePointPicking.html)
 
